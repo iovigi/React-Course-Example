@@ -25,7 +25,7 @@ class App extends Component {
   // );
 
   render(){
-    return React.createElement('div', { className:'app' }, React.createElement('h1', null, 'I\'m robot!!'));
+    return React.createElement('div', { className:'App' }, React.createElement('h1', null, 'I\'m robot!!'));
   }
 }
 
