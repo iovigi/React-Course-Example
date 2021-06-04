@@ -6,7 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Person />
+        <Person name="Iliya" age="30" />
+        <Person name="Petar" age="25">My Hobbies:Racing</Person>
       </div>
     );
   }
