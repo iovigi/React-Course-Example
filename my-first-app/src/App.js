@@ -3,11 +3,24 @@ import React, { Component } from 'react';
 import Person from './Person/Person';
 
 class App extends Component {
+  state = {
+    persons: [
+      { name: 'Iliya', age: 28 },
+      { name: 'Manu', age: 29 },
+      { name: 'Petar', age: 30 }
+    ]
+  }
+
+  switchNameHandler = () => {
+    console.log('Click');
+  }
+
   render() {
     return (
       <div className="App">
-        <Person name="Iliya" age="30" />
-        <Person name="Petar" age="25">My Hobbies:Racing</Person>
+        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies:Racing</Person>
       </div>
     );
   }
